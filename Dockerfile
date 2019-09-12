@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER rahulansible@gmail.com
+LABEL maintainer="rahulansible@gmail.com"
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install basics
@@ -35,3 +35,4 @@ ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 
 # By default start up apache in the foreground, override with /bin/bash for interative.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
+
